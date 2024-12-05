@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+// *variables*
+$cyan: #2ab2af;
+$cyan2: #3dd1cf;
+$bright-yellow: #c0df34;
+
+$light-gray: #e5eff5;
+$gray-blue: #98a6bd;
+
+$weight1: 400;
+$weight2: 700;
+
+// font-family: "Karla", sans-serif;
+//   font-optical-sizing: auto;
+//   font-weight: <weight>;
+//   font-style: normal;
+
+// *css reset*
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+body {
+  background-color: $light-gray;
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 55vw;
+    height: max-content;
+    border-radius: 12px;
+    .section1 {
+      background-color: rgb(255, 247, 247);
+      flex-basis: 100%;
+      border-radius: 12px 12px 0 0;
+      padding: 2rem 2rem 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      gap: 2.5vh;
+      align-items: flex-start;
+      .title {
+        color: $cyan;
+        font-weight: $weight2;
+      }
+      .title2 {
+        color: $bright-yellow;
+      }
+      .description {
+        color: $gray-blue;
+      }
+    }
+    .main-section {
+      display: flex;
+      border-radius: 0 0 12px 12px;
+      .section2 {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        gap: 2vh;
+        padding: 3rem 3.5rem;
+        border-radius: 0 0 0 12px;
+        background-color: $cyan;
+        flex-basis: 50%;
+        .month-subs {
+          color: $light-gray;
+        }
+        .dollar29 {
+          color: $light-gray;
+          font-size: xx-large;
+          font-weight: $weight2;
+          display: inline-flex;
+          align-items: center;
+          gap: 1vw;
+          span {
+            font-weight: $weight1;
+            color: $gray-blue;
+            font-size: large;
+          }
+        }
+        .full-access {
+          color: $light-gray;
+        }
+        .signup {
+          margin-top: 4vh;
+          border: none;
+          color: $light-gray;
+          background-color: $bright-yellow;
+          padding: 0.5rem 3rem;
+          border-radius: 5px;
+          font-size: larger;
+          font-weight: $weight2;
+        }
+      }
+      .section3 {
+        border-radius: 0 0 12px 0;
+        background-color: $cyan2;
+        padding: 3rem 3.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+        flex-basis: 50%;
+        color: $light-gray;
+        .why-us {
+          font-weight: $weight2;
+        }
+        .description2 {
+          font-weight: $weight1;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    main {
+      width: 80vw;
+      .main-section {
+        flex-direction: column;
+
+        .section2 {
+          border-radius: 0;
+          padding: 2rem 2.5rem;
+        }
+        
+        .section3 {
+            padding: 2rem 2.5rem;
+          border-radius: 0 0 12px 12px;
+        }
+      }
+    }
+  }
+}
